@@ -1,11 +1,11 @@
 
 # Atlan Backend Internship Task -
 ## How to run:
-    ● Make sure docker is installed
-    ```
-        docker-compose up --build
-    ```
-    PORT EXPOESED : 80
+● Make sure docker is installed
+```
+    docker-compose up --build
+```
+PORT EXPOESED : 80
 ## Data Model:
 ● **userModel** a simple model to store user objects:
     ● username
@@ -62,7 +62,7 @@
 **send:**
 ```JSON
 {
-    filename: "sample.csv"
+    "filename": "sample.csv"
 }
 ```
 **recieve**
