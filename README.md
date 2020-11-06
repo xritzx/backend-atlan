@@ -6,6 +6,7 @@
     docker-compose up --build
 ```
 PORT EXPOESED : 80
+
 ## Data Model:
 ● **userModel** a simple model to store user objects:
     ● username
@@ -13,6 +14,7 @@ PORT EXPOESED : 80
 
 ## API Endpoints :-
 **1. POST /auth/signup:** This route is for signing up users(or logging in if user already exist) which will be taking an email and password to create/login the user.
+
 **send:**
 
 ```JSON
@@ -21,7 +23,9 @@ PORT EXPOESED : 80
     "password": "helloatlan"
 }
 ```
+
 **recieve**
+
 ```JSON
 {
     "message" : "User logged /created",
@@ -33,11 +37,16 @@ PORT EXPOESED : 80
 
 **2a. POST /upload/:** This route takes in the file to be uploaded and starts saving it into the server
 **Add headers** 
+
 `Authorization : Bearer jfabjafaf39tnglagg_#1h1rjafTHE_RECIEVED_AUTH_TOKENasfkj3t01h301tbgp12`
+
 **send:**
+
     `form-data:`
     `KEY(file/text):VALUE(file.format)`
+    
 **recieve**
+
 ```JSON
 {
     "Message on COMPLETION/ABORTION/ERROR"
@@ -46,10 +55,15 @@ PORT EXPOESED : 80
 
 **2b. POST /upload/stop:** Call to this route stops the ongoing upload process by the user identified by the Auth Token
 **Add headers** 
+
 `Authorization : Bearer jfabjafaf39tnglagg_#1h1rjafTHE_RECIEVED_AUTH_TOKENasfkj3t01h301tbgp12`
+
 **send:**
+
     `nothing needs to be sent`
+    
 **recieve**
+
 ```JSON
 {
     "Message on TERMINATION/ERROR"
@@ -58,14 +72,19 @@ PORT EXPOESED : 80
 
 **3a. POST /export/:** This route takes in the filename to be downloaded and starts `piping` it into the `Response` object
 **Add headers** 
+
 `Authorization : Bearer jfabjafaf39tnglagg_#1h1rjafTHE_RECIEVED_AUTH_TOKENasfkj3t01h301tbgp12`
+
 **send:**
+
 ```JSON
 {
     "filename": "sample.csv"
 }
 ```
+
 **recieve**
+
 ```JSON
 {
     "Message on COMPLETION/ABORTION/ERROR"
@@ -73,11 +92,17 @@ PORT EXPOESED : 80
 ```
 
 **3b. POST /export/stop:** Call to this route stops the ongoing export process by the user identified by the Auth Token
+
 **Add headers** 
+
 `Authorization : Bearer jfabjafaf39tnglagg_#1h1rjafTHE_RECIEVED_AUTH_TOKENasfkj3t01h301tbgp12`
+
 **send:**
+
     `nothing needs to be sent`
+    
 **recieve**
+
 ```JSON
 {
     "Message on export TERMINATION/ERROR"
